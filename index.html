@@ -44,6 +44,10 @@
     PROBLEM 5 (DEBUGGING): The code below is getting the error "Uncaught ReferenceError: matchAnnouncement is not defined", but it is defined. Fix the code so runs as expected.
     */
 
+    const matchAnnouncement = (player1, player2) => {
+      return `Welcome! Today, ${player1} faces ${player2}`;
+    }
+    
     const playGame = (player1, player2) => {
       console.log(matchAnnouncement(player1, player2));
       const winner = coinFlip(player1, player2);
@@ -51,10 +55,6 @@
     }
     
     playGame('Phoebe', 'Rachel');
-    
-    const matchAnnouncement = (player1, player2) => {
-      return `Welcome! Today, ${player1} faces ${player2}`;
-    }
     
     function coinFlip(heads, tails) {
       if (Math.random() >= 0.5) {
